@@ -1,0 +1,63 @@
+:root {
+  --main-bg-color: #205fbd;
+  --main-color: #ffffff;
+  --secondary-bg-color: #ffffff;
+  --secondary-color: #ffc800;
+  --bs-primary-rgb: 16, 165, 235;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--main-bg-color);
+}
+
+p.box {
+  padding: 20px 0px;
+}
+
+.box {
+  padding: 30px;
+}
+
+#mainNav.navbar-shrink { 
+  background-color: var(--main-bg-color);
+}
+
+#mainNav .navbar-brand {
+  color: var(--main-color);
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: var(--secondary-color);
+}
+
+header.masthead {
+  height: 100vh;
+  background-color: var(--secondary-bg-color);
+  background-image: url("../assets/img/hero-bg.png");
+}
+
+header.masthead .masthead-heading {
+  text-align: left;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+header.masthead .masthead-subheading {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.page-section {
+  padding: 30px 0px 0px 0px;
+}
+
+#services.page-section {
+  padding-bottom: 50px;
+}
+
