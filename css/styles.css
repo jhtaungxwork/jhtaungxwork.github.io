@@ -200,10 +200,49 @@ section#services {
   padding-bottom: 60px;
 }
 
+section#services .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+section#services .img-box {
+  width: 120px;
+  height: 120px;
+  padding: 15px;
+  background-color: #10a5eb;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+section#services .img-box img {
+  max-width: 55px;
+  max-height: 55px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 section#specialties {
   padding-top: 7rem;
 }
-
 
 section#services-page {
   background-color: var(--main-bg-light-color);
