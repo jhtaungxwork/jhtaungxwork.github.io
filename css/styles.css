@@ -52,6 +52,7 @@ p.box {
     padding: 9rem 0;
   }
 }
+
 .btn-xl {
   padding: 1.25rem 2.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -151,7 +152,7 @@ header.masthead {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
-  background-size: cover;
+  background-size: auto 66%;
 }
 header.masthead .masthead-heading {
   font-size: 1.5rem;
@@ -161,7 +162,7 @@ header.masthead .masthead-heading {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 header.masthead .masthead-subheading {
-  font-size: 1rem;
+  font-size: .8rem;
   font-style: italic;
   font-weight: bold;
   line-height: 1.5rem;
@@ -169,22 +170,44 @@ header.masthead .masthead-subheading {
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+@media (min-width: 550px) {
+  header.masthead {
+    background-size: cover;
+  }
+}
+
 @media (min-width: 768px) {
+  header.masthead {
+    background-size: cover;
+  }
+  header.masthead .masthead-heading {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  header.masthead .masthead-subheading {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
   header.masthead {
     padding-top: 17rem;
     padding-bottom: 20rem;
+  }
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
   }
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
     font-style: italic;
     line-height: 2.25rem;
     margin-bottom: 2rem;
-  }
-  header.masthead .masthead-heading {
-    font-size: 4.5rem;
-    font-weight: 700;
-    line-height: 4.5rem;
-    margin-bottom: 4rem;
   }
 }
 
@@ -244,6 +267,10 @@ section#specialties {
   padding-top: 7rem;
 }
 
+#specialties .hr {
+  margin: 10px 0px;
+}
+
 .img-box-services {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -284,22 +311,30 @@ section#team {
   margin-top: 1.5rem;
   margin-bottom: 0;
 }
-
 .img-brand {
   height: 2.75rem;
 }
 
-section#team-page {
+section#team-members {
   color: black;
   padding-top: 7rem;
 }
-
+.team-member-row {
+  padding-top: 30px;
+}
 .img-team {
   text-align:center;
+  padding-top: 30px;
+}
+.img-team img {
+  max-width:200px;
+  padding-bottom: 60px;
 }
 
-.team-member-row {
-  padding: 7rem 0;
+@media (min-width: 768px) {
+  .img-team img {
+    max-width:425px;
+  }
 }
 
 /* Testimonial */

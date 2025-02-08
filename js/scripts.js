@@ -1,35 +1,5 @@
-/*!
- * Start Bootstrap - Agency v7.0.12 (https://startbootstrap.com/theme/agency)
- * Copyright 2013-2023 Start Bootstrap
- * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
- */
-//
-// Scripts
-//
-
 window.addEventListener("DOMContentLoaded", (event) => {
-  /*
-  // Navbar shrink function
-  var navbarShrink = function () {
-    const navbarCollapsible = document.body.querySelector("#mainNav");
-    if (!navbarCollapsible) {
-      return;
-    }
-    if (window.scrollY === 0) {
-      navbarCollapsible.classList.remove("navbar-shrink");
-    } else {
-      navbarCollapsible.classList.add("navbar-shrink");
-    }
-  };
-
-  // Shrink the navbar
-  navbarShrink();
-
-  // Shrink the navbar when page is scrolled
-  document.addEventListener('scroll', navbarShrink);
-  */
-
-  //  Activate Bootstrap scrollspy on the main nav element
+//  Activate Bootstrap scrollspy on the main nav element
   const mainNav = document.body.querySelector("#mainNav");
   if (mainNav) {
     new bootstrap.ScrollSpy(document.body, {
@@ -51,3 +21,33 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   });
 });
+
+window.addEventListener('load', function() {
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.getElementsByClassName('needs-validation');
+  // Loop over them and prevent submission
+  var validation = Array.prototype.filter.call(forms, function(form) {
+    form.addEventListener('submit', function(event) {
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+      } else {
+        event.preventDefault();
+        let name = document.getElementById('contact-name').value;
+        let email = document.getElementById('contact-email').value;
+        let phone = document.getElementById('contact-phone').value;
+        let message = document.getElementById('contact-message').value;
+
+        let to = 'jhtaung.work@gmail.com';
+        let subject = 'Bleu Psychiatry Inquiry - ' + name;
+        let newLine = '%0D%0A';
+        let body = 'Name: ' + name + newLine + 'Email: ' + email + newLine +
+          '\nPhone: ' + phone + newLine + newLine + 'Message: ' + newLine + message;
+        let mailto = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
+        console.log(mailto);
+        window.open(mailto);
+      }
+      form.classList.add('was-validated');
+    }, false);
+  });
+}, false);
